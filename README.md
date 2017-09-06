@@ -30,6 +30,9 @@ After this, the machine can be accessed over ssh, using:
 
     vagrant ssh
 
+If you wish to rerun the provisioning (Ansible), it can be done using:
+
+    vagrant provision
 
 ## FAQ:
 ### What if I don't like virtualbox?
