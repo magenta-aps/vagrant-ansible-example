@@ -4,11 +4,22 @@ Vagrant-Ansible Example
 Example project for running Ansible, inside a newly created virtual machine.
 
 ## Installation:
+### Ubuntu 16.04 (Xenial)
 
-To install vagrant on Ubuntu 16.04 (Xenial), run:
+To install vagrant, run:
 
     apt-get update
     apt-get install vagrant
+
+To install Ansible, run:
+
+    apt-get update
+    apt-get install ansible
+
+### Other platforms
+
+Not supported, please figure out a solution yourself, and add it via. a pull
+request.
 
 
 ## Usage:
