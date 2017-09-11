@@ -21,6 +21,13 @@ To install Ansible, run:
 
     apt-get update
     apt-get install ansible
+    
+Additionally a hypervisor must be installed, the default is virtualbox:
+
+    apt-get update
+    apt-get install virtualbox
+    
+Other hypervisors can be installed instead, refer to the FAQ for this.
 
 
 ### MacOS Sierra (10.12.3)
