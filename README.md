@@ -5,6 +5,11 @@ Example project for running Ansible, inside a newly created virtual machine.
 
 ## Installation:
 
+Clone this project:
+
+    git clone https://github.com/magenta-aps/vagrant-ansible-example.git
+
+
 ### Ubuntu 16.04 (Xenial)
 
 To install vagrant, run:
