@@ -4,6 +4,7 @@ Vagrant-Ansible Example
 Example project for running Ansible, inside a newly created virtual machine.
 
 ## Installation:
+
 ### Ubuntu 16.04 (Xenial)
 
 To install vagrant, run:
@@ -15,6 +16,23 @@ To install Ansible, run:
 
     apt-get update
     apt-get install ansible
+
+
+### MacOS Sierra (10.12.3)
+
+Both vagrant and Ansible can be installed using the [Homebrew](https://brew.sh/) CLI.
+
+Vagrant depends on [Virtualbox](https://www.virtualbox.org/) for MacOS.
+To install vagrant and Virtualbox, add the 'cask' tap to homebrew and run:
+
+    brew tap caskroom/cask
+    brew install caskroom/cask/virtualbox
+    brew install caskroom/cask/vagrant
+
+To install Ansible, run:
+
+    brew install ansible
+
 
 ### Other platforms
 
