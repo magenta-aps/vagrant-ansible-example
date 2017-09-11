@@ -10,7 +10,7 @@ Clone this project:
     git clone https://github.com/magenta-aps/vagrant-ansible-example.git
 
 
-### Ubuntu 16.04 (Xenial)
+### Ubuntu Xenial (16.04)
 
 To install vagrant, run:
 
