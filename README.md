@@ -65,6 +65,16 @@ If you wish to rerun the provisioning (Ansible), it can be done using:
     vagrant provision
 
 ## FAQ:
+
+### I can't serve HTTP from guest to host
+
+Could be related to using Virtualbox. When using vagrant with Virtualbox, you'll be prompted to choose a bridged network interface. Select the interface that is being used to connect to the internet.
+
+Also, try to forward ports in your `Vagrantfile` by adding this line:
+
+    config.vm.network "forwarded_port", guest: 8000, host: 8000
+    
+
 ### What if I don't like virtualbox?
 
 Fortunately several other providers can be utilized, specifically:
