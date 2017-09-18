@@ -22,7 +22,7 @@ To install Ansible, run:
     apt-get update
     apt-get install ansible
     
-Additionally a hypervisor must be installed, the default is virtualbox:
+Additionally a hypervisor must be installed, the default is VirtualBox:
 
     apt-get update
     apt-get install virtualbox
@@ -45,6 +45,23 @@ To install Ansible, run:
 
     brew install ansible
 
+### Windows 10 Home
+
+To install vagrant;
+
+1. Download the msi file from [here](https://releases.hashicorp.com/vagrant/2.0.0/vagrant_2.0.0_x86_64.msi)
+2. Install it using the default Windows method of clicking 'Next' and accepting everything blindly.
+
+To install Ansible;
+
+1. Windows isn’t supported for the control machine.
+    
+Additionally a hypervisor must be installed, on Windows we use VirtualBox;
+
+1. Download the exe file from [here](http://download.virtualbox.org/virtualbox/5.1.28/VirtualBox-5.1.28-117968-Win.exe)
+2. Install it using the default Windows method of clicking 'Next' and accepting everything blindly.
+    
+No other hypervisors are supported.
 
 ### Other platforms
 
@@ -68,14 +85,14 @@ If you wish to rerun the provisioning (Ansible), it can be done using:
 
 ### I can't serve HTTP from guest to host
 
-Could be related to using Virtualbox. When using vagrant with Virtualbox, you'll be prompted to choose a bridged network interface. Select the interface that is being used to connect to the internet.
+Could be related to using VirtualBox. When using Vagrant with VirtualBox, you'll be prompted to choose a bridged network interface. Select the interface that is being used to connect to the internet.
 
 Also, try to forward ports in your `Vagrantfile` by adding this line:
 
     config.vm.network "forwarded_port", guest: 8000, host: 8000
     
 
-### What if I don't like virtualbox?
+### What if I don't like VirtualBox?
 
 Fortunately several other providers can be utilized, specifically:
 * `lxc`
