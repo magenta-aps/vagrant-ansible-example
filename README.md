@@ -63,6 +63,7 @@ Additionally a hypervisor must be installed, on Windows we use VirtualBox;
     
 No other hypervisors are supported.
 
+<!---
 At this point we are ready to add the software to our `PATH` variable;
 
 1. In Search, search for and then select: 'System (Control Panel)'
@@ -74,6 +75,7 @@ At this point we are ready to add the software to our `PATH` variable;
 7. The value to specify is: `C:\HashiCorp\Vagrant\bin`
 8. Click OK.
 9. Close all remaining windows by clicking OK.   
+--->
 
 ### Other platforms
 
