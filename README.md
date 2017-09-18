@@ -51,11 +51,13 @@ To install Vagrant;
 
 1. Download the msi file from [here](https://releases.hashicorp.com/vagrant/2.0.0/vagrant_2.0.0_x86_64.msi)
 2. Install it using the default Windows method of clicking 'Next' and accepting everything blindly.
+3. Reboot
 
-As Vagrant apperently depends on Cygwin, we also need to;
+As Vagrant cannot run under the Windows Terminal, we need Cygwin;
 
-3. Download the exe file for Cygwin from [here](https://cygwin.com/setup-x86_64.exe)
-4. Install it using the default Windows method of clicking 'Next' and accepting everything blindly.
+4. Download the exe file for Cygwin from [here](https://cygwin.com/setup-x86_64.exe)
+5. Install it using the default Windows method of clicking 'Next' and accepting everything blindly.
+6. Reboot?
 
 To install Ansible;
 
@@ -65,7 +67,8 @@ Additionally a hypervisor must be installed, on Windows we use VirtualBox;
 
 1. Download the exe file from [here](http://download.virtualbox.org/virtualbox/5.1.28/VirtualBox-5.1.28-117968-Win.exe)
 2. Install it using the default Windows method of clicking 'Next' and accepting everything blindly.
-    
+3. Reboot
+
 No other hypervisors are supported.
 
 <!---
