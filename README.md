@@ -12,7 +12,7 @@ Clone this project:
 
 ### Ubuntu Xenial (16.04)
 
-To install vagrant, run:
+To install Vagrant, run:
 
     apt-get update
     apt-get install vagrant
@@ -47,10 +47,15 @@ To install Ansible, run:
 
 ### Windows 10 Home
 
-To install vagrant;
+To install Vagrant;
 
 1. Download the msi file from [here](https://releases.hashicorp.com/vagrant/2.0.0/vagrant_2.0.0_x86_64.msi)
 2. Install it using the default Windows method of clicking 'Next' and accepting everything blindly.
+
+As Vagrant apperently depends on Cygwin, we also need to;
+
+3. Download the exe file for Cygwin from [here](https://cygwin.com/setup-x86_64.exe)
+4. Install it using the default Windows method of clicking 'Next' and accepting everything blindly.
 
 To install Ansible;
 
