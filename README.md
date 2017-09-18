@@ -61,7 +61,10 @@ As Vagrant cannot run under the Windows Terminal, we need Cygwin;
 
 To install Ansible;
 
-1. Windows isn’t supported for the control machine.
+***Windows isn’t supported for the control machine.***
+
+https://www.azavea.com/blog/2014/10/30/running-vagrant-with-ansible-provisioning-on-windows/
+https://www.jeffgeerling.com/blog/running-ansible-within-windows
     
 Additionally a hypervisor must be installed, on Windows we use VirtualBox;
 
