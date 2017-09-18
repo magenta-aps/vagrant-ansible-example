@@ -63,6 +63,18 @@ Additionally a hypervisor must be installed, on Windows we use VirtualBox;
     
 No other hypervisors are supported.
 
+At this point we are ready to add the software to our `PATH` variable;
+
+1. In Search, search for and then select: 'System (Control Panel)'
+2. Click the 'Advanced system settings' link (on the left).
+3. Click 'Environment Variables'.
+4. In the section 'System variables', find the `PATH` or `Path` environment variable and select it.
+5. Click Edit. If neither `PATH` or `Path` environment variable exists, click New.
+6. In the 'Edit environment variable' (or 'New System Variable') window, specify the value of the `PATH` environment variable.
+7. The value to specify is: `C:\HashiCorp\Vagrant\bin`
+8. Click OK.
+9. Close all remaining windows by clicking OK.   
+
 ### Other platforms
 
 Not supported, please figure out a solution yourself, and add it via. a pull
