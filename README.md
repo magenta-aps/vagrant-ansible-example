@@ -29,7 +29,9 @@ submodule:
     git submodule add git@github.com:magenta-aps/vagrant.git
 
 Next setup an Ansible folder, the folder from this repository may be used as a
-template. Please refer to [README.md in ansible/](ansible/README.md) for
+template. 
+
+Please refer to [README.md in ansible/](ansible/README.md) for
 details.
 
 ## Usage:
