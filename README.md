@@ -50,3 +50,12 @@ Once the machine is available, it can be accessed over ssh, using:
 If you wish to rerun the provisioning (Shell/Ansible), it can be done using:
 
     vagrant provision
+
+
+### Running specific playbooks:
+
+By default the `default.yml` playbook is run, but any playbook can be run, by
+changing the `PLAYBOOK` environmental variable before running `vagrant provision`,
+as done by:
+
+    PLAYBOOK=demo.yml vagrant provision
