@@ -1,0 +1,14 @@
+# Playbook for server
+---
+
+- hosts: all
+
+  remote_user: vagrant
+  become: true
+  become_method: sudo
+  become_user: root
+
+  roles:
+  - vim
+
+...
