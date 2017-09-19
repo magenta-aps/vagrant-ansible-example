@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+provisioner=(ENV['PROVISIONER'] || 'shell')
+
 Vagrant.configure("2") do |config|
   # TODO: Ubuntu Xenial image
   config.vm.box = "debian/stretch64"
@@ -10,11 +12,27 @@ Vagrant.configure("2") do |config|
       :mode => "bridge",
       :type => "bridge"
 
-  vagrant_root = File.dirname(__FILE__)
-  ENV['ANSIBLE_ROLES_PATH'] = "#{vagrant_root}/ansible/roles"
+  # Provision using shell
+  # ---------------------
+  # Installs Ansible inside container, and runs it locally
+  if provisioner == 'shell' then
+      config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+      config.vm.provision "shell",
+          inline: "/bin/bash /vagrant/provision.sh"
+  # Provision using ansible
+  # -----------------------
+  # Requires a local installation of ansible
+  elsif provisioner == 'ansible' then
+      vagrant_root = File.dirname(__FILE__)
+      ENV['ANSIBLE_ROLES_PATH'] = "#{vagrant_root}/ansible/roles"
 
-  config.vm.provision :ansible do |ansible|
-    ansible.playbook = "ansible/playbooks/test.yml"
-    ansible.verbose = "vvvv"
+      config.vm.provision :ansible do |ansible|
+        ansible.playbook = "ansible/playbooks/test.yml"
+        ansible.verbose = "vv"
+      end
+  # Any other privioners are errors.
+  else
+      raise Vagrant::Errors::VagrantError.new,
+          "Error: Unknown provisioner selected (" + provisioner + ")!"
   end
 end

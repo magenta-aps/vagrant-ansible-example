@@ -17,11 +17,6 @@ To install Vagrant, run:
     apt-get update
     apt-get install vagrant
 
-To install Ansible, run:
-
-    apt-get update
-    apt-get install ansible
-    
 Additionally a hypervisor must be installed, the default is VirtualBox:
 
     apt-get update
@@ -32,18 +27,16 @@ Other hypervisors can be installed instead, refer to the FAQ for this.
 
 ### MacOS Sierra (10.12.3)
 
-Both vagrant and Ansible can be installed using the [Homebrew](https://brew.sh/) CLI.
+Vagrant can be installed using the [Homebrew](https://brew.sh/) CLI.
 
-Vagrant depends on [Virtualbox](https://www.virtualbox.org/) for MacOS.
-To install vagrant and Virtualbox, add the 'cask' tap to homebrew and run:
+Only the [Virtualbox](https://www.virtualbox.org/) hypervisor is supported on MacOS.
+
+To install Vagrant and Virtualbox, add the 'cask' tap to homebrew and run:
 
     brew tap caskroom/cask
     brew install caskroom/cask/virtualbox
     brew install caskroom/cask/vagrant
 
-To install Ansible, run:
-
-    brew install ansible
 
 ### Windows 10 Home
 
@@ -59,13 +52,6 @@ As Vagrant cannot run under the Windows Terminal, we need Cygwin;
 5. Install it using the default Windows method of clicking 'Next' and accepting everything blindly.
 6. Reboot?
 
-To install Ansible;
-
-***Windows isn’t supported for the control machine.***
-
-https://www.azavea.com/blog/2014/10/30/running-vagrant-with-ansible-provisioning-on-windows/
-https://www.jeffgeerling.com/blog/running-ansible-within-windows
-    
 Additionally a hypervisor must be installed, on Windows we use VirtualBox;
 
 1. Download the exe file from [here](http://download.virtualbox.org/virtualbox/5.1.28/VirtualBox-5.1.28-117968-Win.exe)
@@ -73,20 +59,6 @@ Additionally a hypervisor must be installed, on Windows we use VirtualBox;
 3. Reboot
 
 No other hypervisors are supported.
-
-<!---
-At this point we are ready to add the software to our `PATH` variable;
-
-1. In Search, search for and then select: 'System (Control Panel)'
-2. Click the 'Advanced system settings' link (on the left).
-3. Click 'Environment Variables'.
-4. In the section 'System variables', find the `PATH` or `Path` environment variable and select it.
-5. Click Edit. If neither `PATH` or `Path` environment variable exists, click New.
-6. In the 'Edit environment variable' (or 'New System Variable') window, specify the value of the `PATH` environment variable.
-7. The value to specify is: `C:\HashiCorp\Vagrant\bin`
-8. Click OK.
-9. Close all remaining windows by clicking OK.   
---->
 
 ### Other platforms
 
@@ -102,9 +74,50 @@ After this, the machine can be accessed over ssh, using:
 
     vagrant ssh
 
-If you wish to rerun the provisioning (Ansible), it can be done using:
+If you wish to rerun the provisioning (Shell/Ansible), it can be done using:
 
     vagrant provision
+
+
+## Speeding up provisioning:
+
+At the moment provisioning is done using Ansible inside the guest container.
+This is to simply the setup process for users, but does incur a tiny overhead.
+
+It is however supported to provision the container using the hosts Ansible installation,
+to do this, simply set the `PROVISIONER` environmental variable before running
+`vagrant provision`, as done by:
+
+    PROVISIONER=ansible vagrant provision
+
+This does however require Ansible to be installed on the host machine.
+See below for how to install Ansible on your system.
+
+
+### Ubuntu Xenial (16.04)
+
+To install Ansible, run:
+
+    apt-get update
+    apt-get install ansible
+
+ 
+### MacOS Sierra (10.12.3)
+
+Ansible can be installed using the [Homebrew](https://brew.sh/) CLI.
+
+To install Ansible, run:
+
+    brew install ansible
+
+
+### Windows 10 Home
+
+***Windows is not officially supported for the control machine.***
+
+It is however possible to get Ansible running anyway.
+See [here](https://www.azavea.com/blog/2014/10/30/running-vagrant-with-ansible-provisioning-on-windows/) and [here](https://www.jeffgeerling.com/blog/running-ansible-within-windows)
+
 
 ## FAQ:
 
