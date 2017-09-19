@@ -34,7 +34,7 @@ And that's it.
 
 ## Usage:
 
-After the setup is complete, please refer to [vagrant/README.md][vagrant/README.md]
+After the setup is complete, please refer to [README.md in vagrant/](https://github.com/magenta-aps/vagrant/blob/master/README.md)
 for detail on how to setup your machine to run Vagrant, Ansible and a Hypervisor
 of your choice.
 
