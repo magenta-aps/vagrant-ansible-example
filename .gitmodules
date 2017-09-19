@@ -1,6 +1,6 @@
 [submodule "vagrant"]
 	path = vagrant
 	url = git@github.com:magenta-aps/vagrant.git
-[submodule "ansible/roles/ansible-role-vim"]
-	path = ansible/roles/ansible-role-vim
+[submodule "ansible/roles/vim"]
+	path = ansible/roles/vim
 	url = git@github.com:magenta-aps/ansible-role-vim.git
