@@ -9,7 +9,7 @@ For the Windows equivalent, see [here](https://github.com/magenta-aps/vagrant-an
 
 To clone this repository recursively, please run:
 
-     git clone --recursive -j8 git@github.com:magenta-aps/vagrant-ansible-example.git
+     git clone --recursive git@github.com:magenta-aps/vagrant-ansible-example.git
 
 Or using older versions of git:
 
