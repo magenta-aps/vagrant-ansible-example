@@ -28,9 +28,9 @@ submodule:
 
     git submodule add git@github.com:magenta-aps/vagrant.git
 
-Next setup an Ansible folder. The folder from this repository may be used.
-
-And that's it.
+Next setup an Ansible folder, the folder from this repository may be used as a
+template. Please refer to [README.md in ansible/](ansible/README.md) for
+details.
 
 ## Usage:
 
@@ -50,7 +50,6 @@ Once the machine is available, it can be accessed over ssh, using:
 If you wish to rerun the provisioning (Shell/Ansible), it can be done using:
 
     vagrant provision
-
 
 ### Running specific playbooks:
 
