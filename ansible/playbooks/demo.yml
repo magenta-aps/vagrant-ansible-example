@@ -8,7 +8,10 @@
 # is run after every reboot, or similar with an apache based WSGI setup.
 
 ---
+# Run the entire default setup playbook
+- include: default.yml
 
+# Run demo specific playbook
 - hosts: all
 
   remote_user: vagrant

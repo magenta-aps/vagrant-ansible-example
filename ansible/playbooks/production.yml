@@ -6,8 +6,12 @@
 #
 # For Django projects, this means configured to use a WSGI apache server, a
 # postgres database server, automatically starting everything on reboot, etc.
----
 
+---
+# Run the entire default setup playbook
+- include: default.yml
+
+# Run production specific playbook
 - hosts: all
 
   remote_user: vagrant

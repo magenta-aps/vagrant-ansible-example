@@ -5,6 +5,7 @@
 #
 # For Django projects, this means configured to a point where all there's left
 # to do after running `vagrant ssh`, is running: `python manage.py runserver`.
+
 ---
 
 - hosts: all
@@ -13,6 +14,10 @@
   become: true
   become_method: sudo
   become_user: root
+
+  pre_tasks:
+    - name: Update apt cache (if old)
+      apt: update_cache=yes cache_valid_time=84600
 
   roles:
   - vim
