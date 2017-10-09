@@ -15,6 +15,6 @@ See the comments in the top of the specific files for their purposes.
 # Roles
 
 Roles can be added as subfolders to the `roles/` folder. If a role common roles
-evolve over time, they should be refactored out, and included using git-submodules.
+evolve over time, they should be refactored out, and included using the `requirements.yml` file.
 
 See the [vim role submodule](https://github.com/magenta-aps/ansible-role-vim) for details.
